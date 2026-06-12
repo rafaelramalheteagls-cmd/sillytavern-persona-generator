@@ -1,39 +1,42 @@
 # SillyTavern Persona Generator
 
-Gere personas automaticamente a partir de character cards para uso no SillyTavern.
+Generate personas from character cards for use in SillyTavern.
 
 ![Main Window](screenshots/main_window.png)
 
 ## Features
 
-- **Interface Gráfica** com tema escuro
-- **Suporte a múltiplos provedores de IA**: OpenAI, Anthropic, Groq, OpenRouter, Together, DeepSeek, NVIDIA, Ollama
-- **Carregamento de character cards**: JSON e PNG (V2/V3)
-- **4 estilos de prompt**: Narrativo, Estruturado, Ficha, Diálogo
-- **Opções de pessoa**: Primeira ou terceira pessoa
-- **Integração com card-forge** para validação de cards
+- **Dark theme GUI** - Modern and comfortable interface
+- **Multiple AI providers** - OpenAI, Anthropic, Groq, OpenRouter, Together, DeepSeek, NVIDIA, Ollama
+- **Character card support** - Load from JSON and PNG files (V2/V3)
+- **4 prompt styles** - Narrative, Structured, Profile, Dialogue
+- **Person options** - First person or third person perspective
+- **Card-forge integration** - Automatic card validation
 
 ## Download
 
-Baixe o executável standalone (não precisa de Python instalado):
+Choose your language:
 
-[**Download Persona Generator.exe**](https://github.com/rafaelramalheteagls-cmd/sillytavern-persona-generator/releases/download/v1.0.0/Persona.Generator.exe)
+| Language | Download |
+|----------|----------|
+| Português | [**Persona Generator.exe**](https://github.com/rafaelramalheteagls-cmd/sillytavern-persona-generator/releases/download/v1.0.0/Persona.Generator.exe) |
+| English | [**Persona Generator EN.exe**](https://github.com/rafaelramalheteagls-cmd/sillytavern-persona-generator/releases/download/v1.0.0/Persona.Generator.EN.exe) |
 
-## Uso
+## How to Use
 
-1. Execute o `Persona Generator.exe`
-2. Clique em **Configurar API** e insira sua API key
-3. Clique em **Carregar Arquivo** e selecione um character card (JSON ou PNG)
-4. Configure as opções (sexo, idade, espécie, estilo, pessoa)
-5. Clique em **Gerar Persona**
-6. Salve a persona gerada
+1. Run `Persona Generator.exe` (or `Persona Generator EN.exe`)
+2. Click **Configure API** and enter your API key
+3. Click **Load File** and select a character card (JSON or PNG)
+4. Set your options (gender, age, species, style, person)
+5. Click **Generate Persona**
+6. Save the generated persona
 
-## Configuração da API
+## API Configuration
 
-O aplicativo suporta múltiplos provedores:
+The application supports multiple AI providers:
 
-| Provedor | URL Padrão |
-|----------|------------|
+| Provider | Default URL |
+|----------|-------------|
 | OpenAI | api.openai.com |
 | Anthropic | api.anthropic.com |
 | Groq | api.groq.com |
@@ -43,42 +46,45 @@ O aplicativo suporta múltiplos provedores:
 | NVIDIA | integrate.api.nvidia.com |
 | Ollama | localhost:11434 |
 
-## Como Importar no SillyTavern
+## Import to SillyTavern
 
-1. Abra o SillyTavern
-2. Clique no ícone de persona (👤) no menu superior
-3. Clique em "Create"
-4. Importe o arquivo JSON gerado
-5. A persona estará pronta para uso
+1. Open SillyTavern
+2. Click the persona icon (👤) in the top menu
+3. Click "Create"
+4. Import the generated JSON file
+5. The persona is ready to use
 
-## Formato da Persona
+## Persona Format
 
 ```json
 {
   "name": "{{user}}",
-  "description": "Descrição da persona",
+  "description": "Persona description",
   "avatar": ""
 }
 ```
 
-## Para Desenvolvedores
+## For Developers
 
 ```bash
-# Instalar dependências
+# Install dependencies
 pip install card-forge pillow pydantic
 
-# Executar a interface
+# Run Portuguese version
 python persona_gui.py
 
-# Geração via linha de comando
+# Run English version
+python persona_gui_en.py
+
+# Command line generation
 python auto_persona.py character_card.json
 ```
 
-## Requisitos
+## Requirements
 
-- Python 3.8+ (para executar o código fonte)
-- Windows (para o executável)
+- Python 3.8+ (for running source code)
+- Windows (for executable)
 
-## Licença
+## License
 
 MIT License
